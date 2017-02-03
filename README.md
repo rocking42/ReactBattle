@@ -1,5 +1,13 @@
 # React Start
 
+Starting a react project
+
+### NPM setup
+Install relevant packages
+```
+npm i --save react react-dom
+npm i --save-dev html-webpack-plugin webpack webpack-dev-server babel-core babel-loader babel-preset-react babel-preset-es2015
+```
 ### Webpack setup
 
 ```
