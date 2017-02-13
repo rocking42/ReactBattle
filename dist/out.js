@@ -89,7 +89,7 @@ function Avatar(props) {
   );
 }
 
-_reactDom2.default.render(_react2.default.createElement(Avatar, { user: _user.user }), document.querySelector("#app"));
+_reactDom2.default.render(_routes.routes, document.querySelector("#app"));
 });
 ___scope___.file("testComponents/Clock.js", function(exports, require, module, __filename, __dirname){ 
 
@@ -288,7 +288,7 @@ ___scope___.file("config/routes.js", function(exports, require, module, __filena
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Routes = undefined;
+exports.routes = undefined;
 
 var _react = require("react");
 
@@ -298,17 +298,21 @@ var _reactRouter = require("react-router");
 
 var _Main = require("../components/Main");
 
-var _Home = require("../components/Home2");
+var _Home = require("../components/Home");
+
+var _About = require("../components/About");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Routes = exports.Routes = _react2.default.createElement(
+var ReactRouter = require("react-router");
+var routes = exports.routes = _react2.default.createElement(
   _reactRouter.Router,
   { history: _reactRouter.hashHistory },
   _react2.default.createElement(
     _reactRouter.Route,
     { path: "/", component: _Main.Main },
-    _react2.default.createElement(_reactRouter.Route, { path: "/home", component: _Home.Home })
+    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home.Home }),
+    _react2.default.createElement(_reactRouter.Route, { path: "about", component: _About.About })
   )
 );
 });
@@ -328,15 +332,15 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Main(props) {
-  console.log(props.children);
   return _react2.default.createElement(
     'div',
     null,
-    'Hello from main'
+    'Hello from main',
+    props.children
   );
 }
 });
-___scope___.file("components/Home2.js", function(exports, require, module, __filename, __dirname){ 
+___scope___.file("components/Home.js", function(exports, require, module, __filename, __dirname){ 
 
 'use strict';
 
@@ -356,6 +360,29 @@ function Home() {
     'div',
     null,
     'Hello from home'
+  );
+}
+});
+___scope___.file("components/About.js", function(exports, require, module, __filename, __dirname){ 
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.About = About;
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function About() {
+  return _react2.default.createElement(
+    "div",
+    null,
+    "About"
   );
 }
 });

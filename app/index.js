@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Clock } from "./testComponents/Clock";
 import { user, ProfileName, ProfileLink, ProfilePic, Timer } from "./info/user";
-import {Routes} from './config/routes';
+import {routes} from './config/routes';
 
 function Link(props) {
   const changeURL = () => {
@@ -34,6 +34,6 @@ function Avatar(props) {
 }
 
 ReactDOM.render(
-  <Avatar user={user}/>,
+  routes,
   document.querySelector("#app")
 )

@@ -13,7 +13,7 @@ let fuseBox = new fsbx.FuseBox({
         fsbx.BabelPlugin({
             config: {
                 sourceMaps: true,
-                presets: ["latest", "react"]
+                presets: ["es2015", "react"]
             }
         })
     ]
