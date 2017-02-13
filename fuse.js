@@ -1,6 +1,5 @@
 const fsbx = require("fuse-box");
 
-
 // Create FuseBox Instance
 let fuseBox = new fsbx.FuseBox({
     homeDir: "app/",
@@ -10,15 +9,11 @@ let fuseBox = new fsbx.FuseBox({
     },
     outFile: "./dist/out.js",
     plugins: [
-        fsbx.SVGPlugin(),
         fsbx.CSSPlugin(),
         fsbx.BabelPlugin({
             config: {
                 sourceMaps: true,
-                presets: ["latest"],
-                plugins: [
-                    ["transform-react-jsx"]
-                ]
+                presets: ["latest", "react"]
             }
         })
     ]

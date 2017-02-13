@@ -6,7 +6,7 @@ import {Home} from "../components/Home2";
 export const Routes = (
   <Router history={hashHistory}>
     <Route path='/' component={Main}>
-      <Route path='/home' component={Home} />
+      <Route path='/home' component= {Home} />
     </Route>
   </Router>
 )
