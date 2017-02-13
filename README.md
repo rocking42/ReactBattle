@@ -38,7 +38,7 @@ Place any plugins and relevant extras
 ```
 {
   "presets": [
-    "react"
+    "react", "es2015"
   ]
 }
 ```
